@@ -66,6 +66,8 @@ const SignUpForm = () => {
                   onChange={handleChange}
                   name="displayName"
                   value ={displayName}
+                  errorMessage = "Display Name should be 3-16 characters and shouldn't any special character"
+                  pattern = "^[A-Za-z0-9]{3,16}$"
                   required/>
 
                 <FormInput
@@ -74,6 +76,7 @@ const SignUpForm = () => {
                   onChange={handleChange}
                   name="email"
                   value={email}
+                  errorMessage = "It should be a valid email adress"
                   required/>
                 
                 <FormInput
@@ -82,6 +85,8 @@ const SignUpForm = () => {
                   onChange={handleChange}
                   name='password'
                   value={password}
+                  errorMessage = "Password should be 9-10 characters and should icludes at least 1 letter, 1 number and 1 special character"
+                  pattern = "^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d][A-Za-z\d!@#$%^&*()_+]{8,10}$"
                   required/>
                 
                 
@@ -91,8 +96,12 @@ const SignUpForm = () => {
                   onChange={handleChange}
                   name='confirmPassword'
                   value={confirmPassword}
+                  errorMessage = "Password don't match"
+                  pattern = {formFields.password}
                   required/>
-                <Button type="submit">Sign Up</Button>
+                <Button 
+                disabled ={!email || !password || !displayName || !confirmPassword} 
+                type="submit">Sign Up</Button>
             </form>
         </div>
     );

@@ -1,9 +1,22 @@
+import { useState } from 'react';
 import './form-input.styles.scss'
 
-const FormInput = ({ label, ...otherProps}) =>{
+const FormInput = ({errorMessage, label, ...otherProps}) =>{
+  const[focused, setFocused] = useState(false)
+  
+  const handleFocus = (e) =>{
+    setFocused(true)
+  }
   return(
     <div className="group">
-      <input className="form-input" {...otherProps} />
+      <input 
+        className="form-input"
+        {...otherProps} 
+        onBlur ={handleFocus} 
+        focused ={focused.toString()}
+        onFocus={() =>
+          otherProps.name==="confirmPassword" && setFocused(true)}
+        />
       {label&& (
         <label
           className={`${
@@ -11,9 +24,9 @@ const FormInput = ({ label, ...otherProps}) =>{
             form-input-label`}
         >
           {label}
-        </label> 
+        </label>
         )}
-       
+        <span className='validation-error-message'>{errorMessage}</span>
       </div>
     );
 };
