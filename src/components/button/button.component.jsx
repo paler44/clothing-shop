@@ -1,4 +1,4 @@
-import '/Users/piotrekneupaueer/Desktop/clothing-shop/src/components/button/button.styles.scss'
+import './button.styles.scss'
 const BUTTON_TYPES_CLASSES = {
     google: 'google-sign-in',
     inverted: 'inverted'
