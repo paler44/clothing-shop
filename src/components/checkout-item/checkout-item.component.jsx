@@ -28,7 +28,7 @@ const CheckoutItem = ({cartItem}) =>{
                  
              </span>
             <span className='price'> {price} </span>
-            <div className='remove-button' onClick={clearItemHandler}> &#10005;</div>
+            <div className='remove-button' cy-data='remove-button' onClick={clearItemHandler}> &#10005;</div>
         </div>
     )
 }
