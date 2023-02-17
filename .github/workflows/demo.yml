@@ -28,6 +28,7 @@ jobs:
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_USERNAME: szwedzkiKucharz
-          SLACK_TITLE: Regression Test
-          SLACK_MESSAGE: "New changes :rocket:"
+          SLACK_ICON: https://bit.ly/3xw14Sk
+          SLACK_TITLE: Smaczne Testy
+          SLACK_MESSAGE: "Den är grön :cook:"
           SLACK_COLOR: ${{ job.status }}
