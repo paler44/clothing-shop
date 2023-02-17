@@ -13,7 +13,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v4 # use the explicit version numberr
         with:
-          build: npm run build
+          install: npm install
           start: npm start
           command: npm run ui-regression
       - name: Uploading artifact
