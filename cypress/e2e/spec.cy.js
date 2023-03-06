@@ -7,5 +7,6 @@ describe('empty spec', () => {
     cy.get('[cy-data="checkout-button"]').should('contain', 'CHECKOUT').click()
     cy.get('[cy-data="cart-icon"]').click()
     cy.get('[cy-data="remove-button"]').click()
+    //test
   })
 })
