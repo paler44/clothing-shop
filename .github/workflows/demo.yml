@@ -1,34 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
- 
-@paler44 
-JoanEsquivel
-/
-cypress-reports
-Public
-Fork your own copy of JoanEsquivel/cypress-reports
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-Beta Try the new code view
-cypress-reports/.github/workflows/demo.yml
-@JoanEsquivel
-JoanEsquivel Update demo.yml
-Latest commit 8b0d9a8 on Oct 9, 2022
- History
- 1 contributor
-31 lines (29 sloc)  919 Bytes
- 
-
 name: Cypress Tests
 
 on: [push]
