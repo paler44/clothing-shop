@@ -18,7 +18,7 @@ jobs:
           start: npm start
           command: npm run ui-regression
       - name: Uploading artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: always()
         with:
           name: cypress-execution-report
