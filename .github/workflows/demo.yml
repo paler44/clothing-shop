@@ -1,17 +1,17 @@
-name: Cypress Tests
+name: Cypress Tests using Cypress Docker Image
 
-on: [push]
+on: push
 
 jobs:
   cypress-run:
-    runs-on: ubuntu-latest
-    steps:
+    runs-on: ubuntu-22.04
+    container: cypress/browsers:node16.16.0-chrome107-ff107-edge
       - name: Checkout
         uses: actions/checkout@v2
       # Install NPM dependencies, cache them correctlys
       # and run all Cypress tests
       - name: Cypress run
-        uses: cypress-io/github-action@v4 # use the explicit version numberr
+        uses: cypress-io/github-action@v4 
         with:
           install: npm install
           start: npm start
@@ -32,3 +32,5 @@ jobs:
           SLACK_TITLE: Smaczne Testy
           SLACK_MESSAGE: "Den är grön :cook:"
           SLACK_COLOR: ${{ job.status }}
+
+
